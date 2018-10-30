@@ -36,13 +36,13 @@ If the input doesn't have the prop value, it isn't a controlled component and Re
 
 # Performance - Critical Rendering Path
 * Create variables with the styles
-```webpack.config
+```webpack.config.js
 var criticalrenderingPath = new ExtractTextPlugin('critical-rendering-path.css');
 var styles = new ExtractTextPlugin('[name]-[hash].css');
 ```
 
 * Add the variables to the `plugins` property:
-```webpack.config
+```webpack.config.js
 module.exports = {
   plugins: [
     criticalrenderingPath,
@@ -52,7 +52,7 @@ module.exports = {
 ```
 
 * Set the css loader
-```webpack.config
+```webpack.config.js
 module.exports = {
   loaders: [{
     test: /\.css$/;
